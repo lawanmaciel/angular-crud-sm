@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    background-color: #f9fbfd !important
+}
+
+h1{
+    color:#6a6a6a;
+}
+
+.box-items{
+    padding: 0.938rem;
+    background-color: #fff;
+    border-radius: 0.313rem;
+    box-shadow: 0 0.25rem 1rem rgb(35 68 101 / 5%), 0 0.25rem 0.25rem rgb(35 68 101 / 5%);
+}

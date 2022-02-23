@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-between mb-4">
+  <h4>Criar novo usuário</h4>
+  <a routerLink="/users" class="btn btn-primary">Voltar</a>
+</div>
+
+<div class="box-items">
+  <div class="row mb-4">
+    <div class="col-6">
+      <label class="form-label">Nome:*</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Insira o nome"
+        [(ngModel)]="request.first_name"
+      />
+    </div>
+    <div class="col-6">
+      <label class="form-label">Sobrenome:*</label>
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Insira o sobrenome"
+      [(ngModel)]="request.last_name"
+      />
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email:*</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="request.email"
+      placeholder="Insira o Email"
+    />
+  </div>
+  <div class="row mb-4">
+    <div class="col-6">
+      <label class="form-label">Avatar:</label>
+      <div class="d-flex flex-row">
+        <img
+          *ngIf="request.avatar"
+          src="{{ request.avatar }}"
+          style="width: 40px"
+        />
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="request.avatar"
+          placeholder="Insira um link ou faça upload ao lado"
+        />
+      </div>
+    </div>
+    <div class="col-6">
+      <label class="form-label">Upload de avatar:</label>
+      <input type="file" class="form-control" disabled />
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-end mt-3">
+    <button class="btn btn-success" (click)="save()">Salvar</button>
+  </div>
+</div>
